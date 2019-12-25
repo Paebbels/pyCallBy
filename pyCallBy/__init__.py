@@ -44,72 +44,125 @@ __api__ = [
 __all__ = __api__
 
 class CallByRefParam:
-	"""Implements a "call by reference" parameter.
+	"""Implements a *call-by-reference* parameter.
 
 	.. seealso::
 
 	   :py:class:`CallByRefBoolParam`
-	     A special "call by reference" implementation for boolean reference types.
+	     A special *call-by-reference* implementation for boolean reference types.
 	   :py:class:`CallByRefIntParam`
-	     A special "call by reference" implementation for integer reference types.
+	     A special *call-by-reference* implementation for integer reference types.
 	"""
+
+	value = None    #: internal value
+
 	def __init__(self, value=None):
+		"""Constructs a *call-by-reference* object for any type."""
 		self.value = value
 
 	def __ilshift__(self, other):
+		"""Assigns a value to the *call-by-reference* object"""
 		self.value = other
 		return self
 
-	def __eq__(self, other):  return self.value == other
-	def __ne__(self, other):  return self.value != other
-	def __repr__(self):       return repr(self.value)
-	def __str__(self):        return str(self.value)
+	# binary operators - comparison
+	def __eq__(self, other):
+		"""Equality: self = other"""
+		return self.value == other
+	def __ne__(self, other):
+		"""Inequality: self != other"""
+		return self.value != other
+
+	# type conversion operators
+	def __repr__(self):
+		"""Returns the wrapped object's string representation."""
+		return repr(self.value)
+	def __str__(self):
+		"""Returns the wrapped object's string equivalent."""
+		return str(self.value)
 
 
 class CallByRefBoolParam(CallByRefParam):
-	"""A special "call by reference" implementation for boolean reference types."""
+	"""A special *call-by-reference* implementation for boolean reference types."""
+
 	# unary operators
-	def __neg__(self):         return not self.value
+	def __neg__(self):
+		"""Negate: !self."""
+		return not self.value
 
 	# binary operators - logical
-	def __and__(self, other):  return self.value and other
-	def __or__(self, other):   return self.value or  other
+	def __and__(self, other):
+		"""And: self & other."""
+		return self.value and other
+	def __or__(self, other):
+		"""Or: self | other."""
+		return self.value or  other
 
 	# binary inplace operators
 	def __iand__(self, other):
+		"""Inplace and: self &= other."""
 		self.value = self.value and other
 		return self
 	def __ior__(self, other):
+		"""Inplace or: self \|= other."""
 		self.value = self.value or other
 		return self
 
 	# type conversion operators
-	def __bool__(self): return self.value
-	def __int__(self):  return int(self.value)
+	def __bool__(self):
+		"""Type conversion to :class:`bool`."""
+		return self.value
+	def __int__(self):
+		"""Type conversion to :class:`int`."""
+		return int(self.value)
 
 
 class CallByRefIntParam(CallByRefParam):
-	"""A special "call by reference" implementation for integer reference types."""
+	"""A special *call-by-reference* implementation for integer reference types."""
 
 	# unary operators
-	def __neg__(self):            return not self.value
+	def __neg__(self):
+		"""Negate: !self."""
+		return not self.value
 
 	# binary operators - arithmetic
-	def __add__(self, other):     return self.value +  other
-	def __sub__(self, other):     return self.value -  other
-	def __truediv__(self, other): return self.value /  other
-	def __mul__(self, other):     return self.value *  other
-	def __mod__(self, other):     return self.value %  other
-	def __pow__(self, other):     return self.value ** other
+	def __add__(self, other):
+		"""Addition: self + other."""
+		return self.value +  other
+	def __sub__(self, other):
+		"""Substraction: self - other."""
+		return self.value -  other
+	def __truediv__(self, other):
+		"""Division: self / other."""
+		return self.value /  other
+	def __mul__(self, other):
+		"""Multiplication: self * other."""
+		return self.value *  other
+	def __mod__(self, other):
+		"""Modulo: self % other."""
+		return self.value %  other
+	def __pow__(self, other):
+		"""Power: self ** other."""
+		return self.value ** other
 
 	# binary operators - comparison
-	def __eq__(self, other):  return self.value == other
-	def __ne__(self, other):  return self.value != other
-	def __lt__(self, other):  return self.value <  other
-	def __le__(self, other):  return self.value <= other
-	def __gt__(self, other):  return self.value >  other
-	def __ge__(self, other):  return self.value >= other
+	def __lt__(self, other):
+		"""Less-than: self < other."""
+		return self.value <  other
+	def __le__(self, other):
+		"""Less-equal: self <= other."""
+		return self.value <= other
+	def __gt__(self, other):
+		"""Greater-than: self > other."""
+		return self.value >  other
+	def __ge__(self, other):
+		"""Greater-equal: self >= other."""
+		return self.value >= other
 
 	# type conversion operators
-	def __bool__(self):       return bool(self.value)
-	def __int__(self):        return self.value
+	def __bool__(self):
+		"""Type conversion to :class:`bool`."""
+		return bool(self.value)
+	def __int__(self):
+		"""Type conversion to :class:`int`."""
+		return self.value
