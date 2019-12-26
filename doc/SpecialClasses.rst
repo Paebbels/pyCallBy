@@ -1,6 +1,11 @@
 Special *call-by-reference* Classes
 ###################################
 
+.. rubric:: Inheritance diagram:
+
+.. inheritance-diagram:: pyCallBy
+   :parts: 1
+
 CallByRefBoolParam
 ******************
 
