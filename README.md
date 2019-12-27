@@ -9,10 +9,9 @@
 ![PyPI - Status](https://img.shields.io/pypi/status/pyCallBy?logo=PyPI)
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/pyCallBy?logo=PyPI)
 [![Dependent repos (via libraries.io)](https://img.shields.io/librariesio/dependent-repos/pypi/pyCallBy)](https://github.com/Paebbels/pyCallBy/network/dependents)  
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/b63aac7ef7e34baf829f11a61574bbaf)](https://www.codacy.com/manual/Paebbels/pyCallBy)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/a738753f1b94494b9fa133584e70889c)](https://www.codacy.com/manual/Paebbels/pyCallBy)
 [![Libraries.io SourceRank](https://img.shields.io/librariesio/sourcerank/pypi/pyCallBy)](https://libraries.io/github/Paebbels/pyCallBy/sourcerank)
 [![Read the Docs](https://img.shields.io/readthedocs/pycallby)](https://pyCallBy.readthedocs.io/en/latest/)
-
 
 # pyCallBy
 
