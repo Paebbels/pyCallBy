@@ -1,11 +1,18 @@
-![PyPI - License](https://img.shields.io/pypi/l/pyCallBy)
-![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/Paebbels/pyCallBy) 
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/Paebbels/pyCallBy)
-[![Documentation Status](https://readthedocs.org/projects/pycallby/badge/?version=latest)](https://pyCallBy.readthedocs.io/en/latest/?badge=latest)  
-[![PyPI](https://img.shields.io/pypi/v/pyCallBy)](https://pypi.org/project/pyCallBy/)
-![PyPI - Python Version](https://img.shields.io/pypi/pyversions/pyCallBy)
-![PyPI - Wheel](https://img.shields.io/pypi/wheel/pyCallBy)
-![PyPI - Status](https://img.shields.io/pypi/status/pyCallBy)
+[![PyPI - License](https://img.shields.io/pypi/l/pyCallBy?logo=PyPI)](LICENSE.md)
+[![GitHub tag (latest SemVer incl. pre-release)](https://img.shields.io/github/v/tag/Paebbels/pyCallBy?logo=GitHub&include_prereleases)](https://github.com/Paebbels/pyCallBy/tags)
+[![GitHub release (latest SemVer incl. including pre-releases)](https://img.shields.io/github/v/release/Paebbels/pyCallBy?logo=GitHub&include_prereleases)](https://github.com/Paebbels/pyCallBy/releases/latest)
+[![GitHub release date](https://img.shields.io/github/release-date/Paebbels/pyCallBy?logo=GitHub&)](https://github.com/Paebbels/pyCallBy/releases)
+[![Libraries.io status for latest release](https://img.shields.io/librariesio/release/pypi/pyCallBy)](https://libraries.io/github/Paebbels/pyCallBy)
+[![Requires.io](https://img.shields.io/requires/github/Paebbels/pyCallBy)](https://requires.io/github/Paebbels/pyCallBy/requirements/?branch=master)  
+[![Travis](https://img.shields.io/travis/com/Paebbels/pyCallBy?logo=Travis)](https://travis-ci.com/Paebbels/pyCallBy)
+[![PyPI](https://img.shields.io/pypi/v/pyCallBy?logo=PyPI)](https://pypi.org/project/pyCallBy/)
+![PyPI - Status](https://img.shields.io/pypi/status/pyCallBy?logo=PyPI)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/pyCallBy?logo=PyPI)
+[![Dependent repos (via libraries.io)](https://img.shields.io/librariesio/dependent-repos/pypi/pyCallBy)](https://github.com/Paebbels/pyCallBy/network/dependents)  
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/b63aac7ef7e34baf829f11a61574bbaf)](https://www.codacy.com/manual/Paebbels/pyCallBy)
+[![Libraries.io SourceRank](https://img.shields.io/librariesio/sourcerank/pypi/pyCallBy)](https://libraries.io/github/Paebbels/pyCallBy/sourcerank)
+[![Read the Docs](https://img.shields.io/readthedocs/pycallby)](https://pyCallBy.readthedocs.io/en/latest/)
+
 
 # pyCallBy
 
@@ -38,7 +45,7 @@ print(myInt.value)
 ```
 
 
-## Contributors:
+## Contributors
 
 * [Patrick Lehmann](https://github.com/Paebbels) (Maintainer)
 
