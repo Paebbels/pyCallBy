@@ -63,18 +63,97 @@ def func2(param : CallByRefBoolParam):
 def func3(param : CallByRefIntParam):
 	param <<= 42
 
-class CallByReference(TestCase):
-	def test_ByRef(self):
-		ref = CallByRefParam()
-		func1(ref)
-		self.assertTupleEqual(ref.value, (3, 4))
+class CallByReference_AnyParam(TestCase):
+	ref : CallByRefParam = CallByRefParam()
 
-	def test_ByBoolRef(self):
-		ref = CallByRefBoolParam()
-		func2(ref)
-		self.assertTrue(ref.value)
+	def setUp(self) -> None:
+		func1(self.ref)
 
-	def test_ByIntRef(self):
-		ref = CallByRefIntParam()
-		func3(ref)
-		self.assertEqual(ref.value, 42)
+	def test_Value(self):
+		self.assertTupleEqual(self.ref.value, (3, 4))
+
+	def test_Equal(self):
+		self.assertTrue(self.ref == (3, 4))
+
+	def test_Unequal(self):
+		self.assertTrue(self.ref != (4, 3))
+
+
+class CallByReference_BoolParam(TestCase):
+	ref : CallByRefBoolParam = CallByRefBoolParam()
+
+	def setUp(self) -> None:
+		func2(self.ref)
+
+	def test_Value(self):
+		self.assertTrue(self.ref.value)
+
+	def test_Invert(self):
+		self.assertFalse(not self.ref)
+
+	def test_Equal(self):
+		self.assertTrue(self.ref == True)
+
+	def test_Unequal(self):
+		self.assertTrue(self.ref != False)
+
+	def test_And(self):
+		self.assertTrue(self.ref & True)
+
+	def test_Or(self):
+		self.assertTrue(self.ref | False)
+
+	def test_TypeConvertToBool(self):
+		self.assertTrue(bool(self.ref))
+
+	def test_TypeConvertToInt(self):
+		self.assertEqual(int(self.ref), 1)
+
+
+class CallByReference_IntParam(TestCase):
+	ref : CallByRefIntParam = CallByRefIntParam()
+
+	def setUp(self) -> None:
+		func3(self.ref)
+
+	def test_Value(self):
+		self.assertEqual(self.ref.value, 42)
+
+	def test_Negate(self):
+		self.assertEqual(-self.ref, -42)
+
+	def test_GeaterThanOrEqual(self):
+		self.assertTrue(self.ref >= 40)
+
+	def test_GreaterThan(self):
+		self.assertTrue(self.ref >  41)
+
+	def test_Equal(self):
+		self.assertTrue(self.ref == 42)
+
+	def test_Unequal(self):
+		self.assertTrue(self.ref != 43)
+
+	def test_LessThan(self):
+		self.assertTrue(self.ref <  44)
+
+	def test_LessThanOrEqual(self):
+		self.assertTrue(self.ref <= 45)
+
+	def test_Addition(self):
+		self.assertEqual(self.ref + 1, 43)
+
+	def test_Subtraction(self):
+		self.assertEqual(self.ref - 1, 41)
+
+	def test_Multiplication(self):
+		self.assertEqual(self.ref * 1, 42)
+
+	def test_Division(self):
+		self.assertEqual(self.ref / 1, 42)
+
+	def test_TypeConvertToBool(self):
+		self.assertTrue(bool(self.ref))
+
+	def test_TypeConvertToInt(self):
+		self.assertEqual(int(self.ref), 42)
