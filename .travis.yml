@@ -1,11 +1,18 @@
 language: python
+python:
+  - 3.8
 
-install: skip
-
-if: tag IS present
+install:
+  - pip3 install -U -r tests/requirements.txt
 
 script:
-  - echo "No tests. Just deploying to PyPI."
+  - echo "Python Code Coverage\n================================================================================"
+  - coverage run --append -m unittest tests.unit.CallByRef
+  - coverage report && coverage xml
+  - echo "Upload coverage results to Codacy..."  && python-codacy-coverage -r coverage.xml
+  - echo "Upload coverage results to CodeCov..." && codecov
+  - echo "Python Unit Tests\n================================================================================"
+  - python -m unittest tests.unit.CallByRef
 
 deploy:
   provider: pypi

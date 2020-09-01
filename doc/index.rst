@@ -32,7 +32,7 @@ Example
 
    # a function using a call-by-reference parameter
    def func(param : CallByRefIntParam):
-     param <= 3
+     param <<= 3
 
    # call the function and pass the wrapper object
    func(myInt)
