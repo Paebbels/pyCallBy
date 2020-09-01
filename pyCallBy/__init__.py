@@ -19,7 +19,7 @@
 #
 # License:
 # ============================================================================
-# Copyright 2017-2019 Patrick Lehmann - Bötzingen, Germany
+# Copyright 2017-2020 Patrick Lehmann - Bötzingen, Germany
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -85,29 +85,6 @@ class CallByRefParam:
 class CallByRefBoolParam(CallByRefParam):
 	"""A special *call-by-reference* implementation for boolean reference types."""
 
-	# unary operators
-	def __neg__(self):
-		"""Negate: !self."""
-		return not self.value
-
-	# binary operators - logical
-	def __and__(self, other):
-		"""And: self & other."""
-		return self.value and other
-	def __or__(self, other):
-		"""Or: self | other."""
-		return self.value or  other
-
-	# binary inplace operators
-	def __iand__(self, other):
-		"""Inplace and: self &= other."""
-		self.value = self.value and other
-		return self
-	def __ior__(self, other):
-		"""Inplace or: self \|= other."""
-		self.value = self.value or other
-		return self
-
 	# type conversion operators
 	def __bool__(self):
 		"""Type conversion to :class:`bool`."""
@@ -122,8 +99,39 @@ class CallByRefIntParam(CallByRefParam):
 
 	# unary operators
 	def __neg__(self):
-		"""Negate: !self."""
+		"""Negate: -self."""
 		return -self.value
+	def __pos__(self):
+		"""Positive: +self."""
+		return +self.value
+	def __invert__(self):
+		"""Invert: ~self."""
+		return ~self.value
+
+	# binary operators - logical
+	def __and__(self, other):
+		"""And: self & other."""
+		return self.value & other
+	def __or__(self, other):
+		"""Or: self | other."""
+		return self.value | other
+	def __xor__(self, other):
+		"""Xor: self ^ other."""
+		return self.value ^   other
+
+	# binary inplace operators
+	def __iand__(self, other):
+		"""Inplace and: self &= other."""
+		self.value &= other
+		return self
+	def __ior__(self, other):
+		"""Inplace or: self \|= other."""
+		self.value |= other
+		return self
+	def __ixor__(self, other):
+		"""Inplace or: self \|= other."""
+		self.value ^= other
+		return self
 
 	# binary operators - arithmetic
 	def __add__(self, other):
@@ -135,6 +143,9 @@ class CallByRefIntParam(CallByRefParam):
 	def __truediv__(self, other):
 		"""Division: self / other."""
 		return self.value /  other
+	def __floordiv__(self, other):
+		"""Floor division: self // other."""
+		return self.value //  other
 	def __mul__(self, other):
 		"""Multiplication: self * other."""
 		return self.value *  other
@@ -144,6 +155,36 @@ class CallByRefIntParam(CallByRefParam):
 	def __pow__(self, other):
 		"""Power: self ** other."""
 		return self.value ** other
+
+	# binary inplace operators - arithmetic
+	def __iadd__(self, other):
+		"""Addition: self += other."""
+		self.value += other
+		return self
+	def __isub__(self, other):
+		"""Substraction: self -= other."""
+		self.value -=  other
+		return self
+	def __idiv__(self, other):
+		"""Division: self /= other."""
+		self.value /= other
+		return self
+	def __ifloordiv__(self, other):
+		"""Floor division: self // other."""
+		self.value //= other
+		return self
+	def __imul__(self, other):
+		"""Multiplication: self *= other."""
+		self.value *= other
+		return self
+	def __imod__(self, other):
+		"""Modulo: self %= other."""
+		self.value %= other
+		return self
+	def __ipow__(self, other):
+		"""Power: self **= other."""
+		self.value **= other
+		return self
 
 	# binary operators - comparison
 	def __lt__(self, other):

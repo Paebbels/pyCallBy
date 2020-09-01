@@ -22,11 +22,11 @@ sys.path.insert(0, os.path.abspath('..'))
 # -- Project information -----------------------------------------------------
 
 project = 'pyCallBy'
-copyright = '2007-2019, Patrick Lehmann'
+copyright = '2007-2020, Patrick Lehmann'
 author = 'Patrick Lehmann'
 
 # The full version, including alpha/beta/rc tags
-release = 'v1.0'
+release = 'v1.1'
 
 
 # -- General configuration ---------------------------------------------------
