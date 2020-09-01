@@ -123,7 +123,7 @@ class CallByRefIntParam(CallByRefParam):
 	# unary operators
 	def __neg__(self):
 		"""Negate: !self."""
-		return not self.value
+		return -self.value
 
 	# binary operators - arithmetic
 	def __add__(self, other):
