@@ -1,17 +1,20 @@
-[![PyPI - License](https://img.shields.io/pypi/l/pyCallBy?logo=PyPI)](LICENSE.md)
+[![Sourcecode on GitHub](https://img.shields.io/badge/Paebbels-pyCallBy-323131.svg?logo=github&longCache=true)](https://github.com/Paebbels/pyCallBy)
+[![License](https://img.shields.io/badge/code%20license-Apache%20License%2C%202.0-lightgrey?logo=GitHub)](LICENSE.md)
 [![GitHub tag (latest SemVer incl. pre-release)](https://img.shields.io/github/v/tag/Paebbels/pyCallBy?logo=GitHub&include_prereleases)](https://github.com/Paebbels/pyCallBy/tags)
 [![GitHub release (latest SemVer incl. including pre-releases)](https://img.shields.io/github/v/release/Paebbels/pyCallBy?logo=GitHub&include_prereleases)](https://github.com/Paebbels/pyCallBy/releases/latest)
-[![GitHub release date](https://img.shields.io/github/release-date/Paebbels/pyCallBy?logo=GitHub&)](https://github.com/Paebbels/pyCallBy/releases)
-[![Libraries.io status for latest release](https://img.shields.io/librariesio/release/pypi/pyCallBy)](https://libraries.io/github/Paebbels/pyCallBy)
-[![Requires.io](https://img.shields.io/requires/github/Paebbels/pyCallBy)](https://requires.io/github/Paebbels/pyCallBy/requirements/?branch=master)  
-[![Travis](https://img.shields.io/travis/com/Paebbels/pyCallBy?logo=Travis)](https://travis-ci.com/Paebbels/pyCallBy)
+[![GitHub release date](https://img.shields.io/github/release-date/Paebbels/pyCallBy?logo=GitHub&)](https://github.com/Paebbels/pyCallBy/releases)  
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/Paebbels/pyCallBy/Test,%20Coverage%20and%20Release?label=Workflow&logo=GitHub)](https://github.com/Paebbels/pyCallBy/actions?query=workflow%3A%22Test%2C+Coverage+and+Release%22)
 [![PyPI](https://img.shields.io/pypi/v/pyCallBy?logo=PyPI)](https://pypi.org/project/pyCallBy/)
 ![PyPI - Status](https://img.shields.io/pypi/status/pyCallBy?logo=PyPI)
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/pyCallBy?logo=PyPI)
 [![Dependent repos (via libraries.io)](https://img.shields.io/librariesio/dependent-repos/pypi/pyCallBy)](https://github.com/Paebbels/pyCallBy/network/dependents)  
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/a738753f1b94494b9fa133584e70889c)](https://www.codacy.com/manual/Paebbels/pyCallBy)
-[![Libraries.io SourceRank](https://img.shields.io/librariesio/sourcerank/pypi/pyCallBy)](https://libraries.io/github/Paebbels/pyCallBy/sourcerank)
-[![Read the Docs](https://img.shields.io/readthedocs/pycallby)](https://pyCallBy.readthedocs.io/en/latest/)
+[![Libraries.io status for latest release](https://img.shields.io/librariesio/release/pypi/pyCallBy)](https://libraries.io/github/Paebbels/pyCallBy)
+[![Requires.io](https://img.shields.io/requires/github/Paebbels/pyCallBy)](https://requires.io/github/Paebbels/pyCallBy/requirements/?branch=master)  
+[![Codacy - Quality](https://img.shields.io/codacy/grade/a738753f1b94494b9fa133584e70889c?logo=Codacy)](https://www.codacy.com/manual/Paebbels/pyCallBy)
+[![Codacy - Coverage](https://img.shields.io/codacy/coverage/a738753f1b94494b9fa133584e70889c?logo=Codacy)](https://www.codacy.com/manual/Paebbels/pyCallBy)
+[![Codecov - Branch Coverage](https://img.shields.io/codecov/c/github/Paebbels/pyCallBy?logo=Codecov)](https://codecov.io/gh/Paebbels/pyCallBy)
+[![Libraries.io SourceRank](https://img.shields.io/librariesio/sourcerank/pypi/pyCallBy)](https://libraries.io/github/Paebbels/pyCallBy/sourcerank)  
+[![Read the Docs](https://img.shields.io/readthedocs/pycallby)](https://pyCallBy.readthedocs.io/en/latest/) 
 
 # pyCallBy
 
@@ -51,7 +54,10 @@ print(myInt.value)
 
 ## License
 
-This library is licensed under [Apache License 2.0](LICENSE.md)
+This Python package (source code) is licensed under [Apache License 2.0](LICENSE.md).
+
+<!-- The accompanying documentation is licensed under Creative Commons - Attribution-4.0 (CC-BY 4.0). -->
+
 
 -------------------------
 
